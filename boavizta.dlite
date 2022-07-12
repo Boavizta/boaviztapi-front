@@ -1,0 +1,3092 @@
+{
+  "applicationModel": {
+    "navbar": {
+      "cid": "navbar",
+      "type": "NavbarView",
+      "brand": "App name",
+      "defaultPage": "index",
+      "navigationItems": [
+        {
+          "pageId": "index",
+          "label": "Index"
+        }
+      ],
+      "eventHandlers": [],
+      "hidden": true
+    },
+    "autoIncrementIds": {
+      "InputView": 64,
+      "TextView": 33,
+      "ContainerView": 44,
+      "CardView": 27,
+      "IteratorView": 6,
+      "ButtonView": 28,
+      "HttpConnector": 2,
+      "ChartView": 3,
+      "DialogView": 1,
+      "CollapseView": 1,
+      "SplitView": 2,
+      "LocalStorageConnector": 1,
+      "SelectView": 1
+    },
+    "name": "boavizta",
+    "bootstrapStylesheetUrl": "assets/ext/themes/slate.css",
+    "darkMode": true,
+    "versionIndex": 1,
+    "version": "0.0.0"
+  },
+  "roots": [
+    {
+      "cid": "navbar",
+      "type": "NavbarView",
+      "brand": "App name",
+      "defaultPage": "index",
+      "navigationItems": [
+        {
+          "pageId": "index",
+          "label": "Index"
+        }
+      ],
+      "eventHandlers": [],
+      "hidden": true
+    },
+    {
+      "label": "Adresse mail",
+      "inputType": "email",
+      "description": "Rentrez votre email",
+      "field": "email",
+      "size": "lg",
+      "disabled": false,
+      "placeholder": "",
+      "type": "InputView",
+      "eventHandlers": [],
+      "cid": "input-0",
+      "dataSource": "$parent",
+      "required": false,
+      "horizontalLayout": false
+    },
+    {
+      "layout": "block",
+      "components": [
+        {
+          "method": "GET",
+          "type": "HttpConnector",
+          "eventHandlers": [],
+          "cid": "http-0"
+        },
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "Model",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-0"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "label": "Manufacturer",
+                "inputType": "text",
+                "description": "",
+                "field": "manufacturer",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-1"
+              },
+              {
+                "label": "Type",
+                "inputType": "text",
+                "description": "",
+                "field": "type",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-3"
+              },
+              {
+                "label": "Name",
+                "inputType": "text",
+                "description": "",
+                "field": "name",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-2"
+              },
+              {
+                "label": "Year",
+                "inputType": "text",
+                "description": "",
+                "field": "year",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-4"
+              },
+              {
+                "label": "Archetype",
+                "inputType": "text",
+                "description": "",
+                "field": "archetype",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-5"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "model",
+            "dataSource": "$parent",
+            "cid": "container-0"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-0"
+        },
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "Configuration",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-1"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "title": "",
+                "subTitle": "",
+                "imgSrc": "",
+                "imgPosition": "top",
+                "imgWidth": "",
+                "imgHeight": "",
+                "text": "",
+                "headerEnabled": true,
+                "header": {
+                  "tag": "b",
+                  "text": "Cpu",
+                  "type": "TextView",
+                  "eventHandlers": [],
+                  "cid": "text-2"
+                },
+                "body": {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "label": "Units",
+                      "inputType": "text",
+                      "description": "",
+                      "field": "units",
+                      "size": "default",
+                      "disabled": false,
+                      "placeholder": "",
+                      "type": "InputView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "input-6"
+                    },
+                    {
+                      "label": "Core_units",
+                      "inputType": "text",
+                      "description": "",
+                      "field": "core_units",
+                      "size": "default",
+                      "disabled": false,
+                      "placeholder": "",
+                      "type": "InputView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "input-7"
+                    }
+                  ],
+                  "defaultValue": "={}",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "field": "cpu",
+                  "dataSource": "$parent",
+                  "cid": "container-1"
+                },
+                "footer": {},
+                "type": "CardView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "card-1"
+              },
+              {
+                "title": "",
+                "subTitle": "",
+                "imgSrc": "",
+                "imgPosition": "top",
+                "imgWidth": "",
+                "imgHeight": "",
+                "text": "",
+                "headerEnabled": true,
+                "header": {
+                  "tag": "b",
+                  "text": "Ram",
+                  "type": "TextView",
+                  "eventHandlers": [],
+                  "cid": "text-3"
+                },
+                "body": {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "dataSource": "$parent",
+                      "label": "Add  new class4",
+                      "buttonType": "button",
+                      "variant": "primary",
+                      "size": "sm",
+                      "pill": false,
+                      "squared": false,
+                      "block": false,
+                      "disabled": false,
+                      "eventHandlers": [
+                        {
+                          "global": false,
+                          "name": "@click",
+                          "actions": [
+                            {
+                              "targetId": "$self",
+                              "name": "addData",
+                              "description": "Add instance",
+                              "argument": "{}"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "ButtonView",
+                      "icon": "plus-circle",
+                      "cid": "button-3"
+                    },
+                    {
+                      "defaultValue": "=[]",
+                      "body": {
+                        "layout": "block",
+                        "components": [
+                          {
+                            "label": "Units",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "units",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-8"
+                          },
+                          {
+                            "label": "Capacity",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "capacity",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-9"
+                          },
+                          {
+                            "label": "Density",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "density",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-10"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "secondary",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": "=(iteratorIndex === 0)",
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-0",
+                                    "name": "moveDataFromTo",
+                                    "description": "Move up",
+                                    "argument": "iteratorIndex, iteratorIndex - 1"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "arrow-up",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-0"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "secondary",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": "=(iteratorIndex === $d('iterator-0').length - 1)",
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-0",
+                                    "name": "moveDataFromTo",
+                                    "description": "Move down",
+                                    "argument": "iteratorIndex, iteratorIndex + 1"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "arrow-down",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-1"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "danger",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": false,
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-0",
+                                    "name": "removeDataAt",
+                                    "description": "Remove",
+                                    "argument": "iteratorIndex"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "trash",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-2"
+                          }
+                        ],
+                        "defaultValue": "={}",
+                        "type": "ContainerView",
+                        "eventHandlers": [],
+                        "direction": "row",
+                        "dataSource": "$parent",
+                        "cid": "container-2"
+                      },
+                      "type": "IteratorView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "iterator-0"
+                    }
+                  ],
+                  "defaultValue": "=[]",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "field": "ram",
+                  "cid": "container-3"
+                },
+                "footer": {},
+                "type": "CardView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "card-2"
+              },
+              {
+                "title": "",
+                "subTitle": "",
+                "imgSrc": "",
+                "imgPosition": "top",
+                "imgWidth": "",
+                "imgHeight": "",
+                "text": "",
+                "headerEnabled": true,
+                "header": {
+                  "tag": "b",
+                  "text": "Disk",
+                  "type": "TextView",
+                  "eventHandlers": [],
+                  "cid": "text-4"
+                },
+                "body": {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "dataSource": "$parent",
+                      "label": "Add  new class5",
+                      "buttonType": "button",
+                      "variant": "primary",
+                      "size": "sm",
+                      "pill": false,
+                      "squared": false,
+                      "block": false,
+                      "disabled": false,
+                      "eventHandlers": [
+                        {
+                          "global": false,
+                          "name": "@click",
+                          "actions": [
+                            {
+                              "targetId": "$self",
+                              "name": "addData",
+                              "description": "Add instance",
+                              "argument": "{}"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "ButtonView",
+                      "icon": "plus-circle",
+                      "cid": "button-7"
+                    },
+                    {
+                      "defaultValue": "=[]",
+                      "body": {
+                        "layout": "block",
+                        "components": [
+                          {
+                            "label": "Units",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "units",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-11"
+                          },
+                          {
+                            "label": "Type",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "type",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-12"
+                          },
+                          {
+                            "label": "Capacity",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "capacity",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-13"
+                          },
+                          {
+                            "label": "Density",
+                            "inputType": "text",
+                            "description": "",
+                            "field": "density",
+                            "size": "sm",
+                            "disabled": false,
+                            "placeholder": "",
+                            "type": "InputView",
+                            "eventHandlers": [],
+                            "class": "mr-2 mb-0",
+                            "layoutClass": "align-self-end",
+                            "dataSource": "$parent",
+                            "cid": "input-14"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "secondary",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": "=(iteratorIndex === 0)",
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-1",
+                                    "name": "moveDataFromTo",
+                                    "description": "Move up",
+                                    "argument": "iteratorIndex, iteratorIndex - 1"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "arrow-up",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-4"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "secondary",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": "=(iteratorIndex === $d('iterator-1').length - 1)",
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-1",
+                                    "name": "moveDataFromTo",
+                                    "description": "Move down",
+                                    "argument": "iteratorIndex, iteratorIndex + 1"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "arrow-down",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-5"
+                          },
+                          {
+                            "dataSource": "$parent",
+                            "label": "",
+                            "buttonType": "button",
+                            "variant": "danger",
+                            "size": "sm",
+                            "pill": false,
+                            "squared": false,
+                            "block": false,
+                            "disabled": false,
+                            "eventHandlers": [
+                              {
+                                "global": false,
+                                "name": "@click",
+                                "actions": [
+                                  {
+                                    "targetId": "iterator-1",
+                                    "name": "removeDataAt",
+                                    "description": "Remove",
+                                    "argument": "iteratorIndex"
+                                  }
+                                ]
+                              }
+                            ],
+                            "type": "ButtonView",
+                            "icon": "trash",
+                            "layoutClass": "align-self-end",
+                            "cid": "button-6"
+                          }
+                        ],
+                        "defaultValue": "={}",
+                        "type": "ContainerView",
+                        "eventHandlers": [],
+                        "direction": "row",
+                        "dataSource": "$parent",
+                        "cid": "container-4"
+                      },
+                      "type": "IteratorView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "iterator-1"
+                    }
+                  ],
+                  "defaultValue": "=[]",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "field": "disk",
+                  "cid": "container-5"
+                },
+                "footer": {},
+                "type": "CardView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "card-3"
+              },
+              {
+                "title": "",
+                "subTitle": "",
+                "imgSrc": "",
+                "imgPosition": "top",
+                "imgWidth": "",
+                "imgHeight": "",
+                "text": "",
+                "headerEnabled": true,
+                "header": {
+                  "tag": "b",
+                  "text": "Power_supply",
+                  "type": "TextView",
+                  "eventHandlers": [],
+                  "cid": "text-5"
+                },
+                "body": {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "label": "Units",
+                      "inputType": "text",
+                      "description": "",
+                      "field": "units",
+                      "size": "default",
+                      "disabled": false,
+                      "placeholder": "",
+                      "type": "InputView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "input-15"
+                    },
+                    {
+                      "label": "Unit_weight",
+                      "inputType": "text",
+                      "description": "",
+                      "field": "unit_weight",
+                      "size": "default",
+                      "disabled": false,
+                      "placeholder": "",
+                      "type": "InputView",
+                      "eventHandlers": [],
+                      "dataSource": "$parent",
+                      "cid": "input-16"
+                    }
+                  ],
+                  "defaultValue": "={}",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "field": "power_supply",
+                  "dataSource": "$parent",
+                  "cid": "container-6"
+                },
+                "footer": {},
+                "type": "CardView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "card-4"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "configuration",
+            "dataSource": "$parent",
+            "cid": "container-7"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-5"
+        },
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "Usage",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-6"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "label": "Years_use_time",
+                "inputType": "text",
+                "description": "",
+                "field": "years_use_time",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-17"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "usage",
+            "dataSource": "$parent",
+            "cid": "container-8"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-6"
+        }
+      ],
+      "defaultValue": "={}",
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "dataSource": "$parent",
+      "cid": "container-9"
+    },
+    {
+      "label": "Type",
+      "inputType": "text",
+      "description": "",
+      "field": "type",
+      "size": "default",
+      "disabled": false,
+      "placeholder": "",
+      "type": "InputView",
+      "eventHandlers": [],
+      "dataSource": "$parent",
+      "cid": "input-20",
+      "defaultValue": ""
+    },
+    {
+      "title": "",
+      "subTitle": "",
+      "imgSrc": "",
+      "imgPosition": "top",
+      "imgWidth": "",
+      "imgHeight": "",
+      "text": "",
+      "headerEnabled": true,
+      "header": {
+        "tag": "b",
+        "text": "CPU",
+        "type": "TextView",
+        "eventHandlers": [],
+        "cid": "text-26"
+      },
+      "body": {
+        "layout": "block",
+        "components": [
+          {
+            "label": "Number of CPU units",
+            "inputType": "text",
+            "description": "",
+            "field": "units",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "class": "",
+            "layoutClass": "",
+            "dataSource": "$parent",
+            "cid": "input-53",
+            "min": "0",
+            "required": null
+          },
+          {
+            "label": "Number of cores per unit",
+            "inputType": "number",
+            "description": "",
+            "field": "core_units",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "class": "",
+            "layoutClass": "align-self-end",
+            "dataSource": "$parent",
+            "cid": "input-54",
+            "min": "0",
+            "required": false
+          }
+        ],
+        "defaultValue": "={}",
+        "type": "ContainerView",
+        "eventHandlers": [],
+        "direction": "row",
+        "cid": "container-34",
+        "form": null,
+        "style": "gap: 2em;",
+        "field": "cpu"
+      },
+      "footer": {},
+      "type": "CardView",
+      "eventHandlers": [],
+      "cid": "card-22",
+      "dataSource": "$parent",
+      "mapper": "\n"
+    },
+    {
+      "layout": "block",
+      "components": [],
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "cid": "container-35",
+      "dataSource": "$parent",
+      "class": "p-0",
+      "field": "",
+      "form": null,
+      "hidden": null
+    },
+    {
+      "layout": "block",
+      "components": [
+        {
+          "tag": "h1",
+          "text": "Boavizta API quick tool",
+          "type": "TextView",
+          "eventHandlers": [],
+          "cid": "text-31"
+        },
+        {
+          "tag": "p",
+          "text": "Fill the form below to estimate the environmental impact.",
+          "type": "TextView",
+          "eventHandlers": [],
+          "cid": "text-32"
+        },
+        {
+          "method": "POST",
+          "type": "HttpConnector",
+          "eventHandlers": [],
+          "cid": "http-1",
+          "baseUrl": "http://localhost:5000",
+          "path": "v1/server/",
+          "resultType": "JSON",
+          "form": false,
+          "publicName": "",
+          "mode": "cors",
+          "init": "",
+          "body": "=$d(\"container-24\")",
+          "headers": "={\"Content-Type\": \"application/json\"}"
+        },
+        {
+          "layout": "block",
+          "components": [
+            {
+              "title": "",
+              "subTitle": "",
+              "imgSrc": "",
+              "imgPosition": "top",
+              "imgWidth": "",
+              "imgHeight": "",
+              "text": "",
+              "headerEnabled": true,
+              "header": {
+                "tag": "b",
+                "text": "Server description",
+                "type": "TextView",
+                "eventHandlers": [],
+                "cid": "text-7"
+              },
+              "body": {
+                "layout": "block",
+                "components": [
+                  {
+                    "label": "Manufacturer",
+                    "inputType": "text",
+                    "description": "",
+                    "field": "manufacturer",
+                    "disabled": false,
+                    "placeholder": "",
+                    "type": "InputView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "cid": "input-18",
+                    "defaultValue": ""
+                  },
+                  {
+                    "label": "Name",
+                    "inputType": "text",
+                    "description": "",
+                    "field": "name",
+                    "size": "default",
+                    "disabled": false,
+                    "placeholder": "",
+                    "type": "InputView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "cid": "input-19",
+                    "defaultValue": ""
+                  },
+                  {
+                    "label": "Type",
+                    "size": "default",
+                    "description": "",
+                    "field": "type",
+                    "disabled": false,
+                    "options": "=[\"blade\", \"rack\"]",
+                    "type": "SelectView",
+                    "eventHandlers": [],
+                    "cid": "select-0",
+                    "dataSource": "$parent"
+                  },
+                  {
+                    "label": "Year",
+                    "inputType": "number",
+                    "description": "",
+                    "field": "year",
+                    "size": "default",
+                    "disabled": false,
+                    "placeholder": "aaaa",
+                    "type": "InputView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "cid": "input-21",
+                    "min": "1970",
+                    "max": "2022"
+                  },
+                  {
+                    "label": "Archetype",
+                    "inputType": "text",
+                    "description": "",
+                    "field": "archetype",
+                    "size": "default",
+                    "disabled": false,
+                    "placeholder": "",
+                    "type": "InputView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "cid": "input-22",
+                    "defaultValue": ""
+                  }
+                ],
+                "defaultValue": "={}",
+                "type": "ContainerView",
+                "eventHandlers": [],
+                "field": "model",
+                "dataSource": "$parent",
+                "cid": "container-10",
+                "form": null,
+                "direction": "row",
+                "wrap": "wrap",
+                "layoutStyle": "",
+                "style": "gap: 2em;"
+              },
+              "footer": {},
+              "type": "CardView",
+              "eventHandlers": [],
+              "dataSource": "$parent",
+              "cid": "card-7",
+              "style": ""
+            },
+            {
+              "layout": "block",
+              "components": [
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "tag": "b",
+                        "text": "CPUs",
+                        "type": "TextView",
+                        "eventHandlers": [],
+                        "cid": "text-27"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "secondary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": false,
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "container-36",
+                                "name": "eval",
+                                "description": "Default action",
+                                "argument": "target.isVisible() ? target.hide() : target.show() ",
+                                "condition": "undefined"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "cid": "button-27",
+                        "icon": "chevron-expand"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "cid": "container-43",
+                    "direction": "row",
+                    "justify": "space-between",
+                    "hidden": null
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Units",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "units",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-55",
+                        "defaultValue": "2"
+                      },
+                      {
+                        "label": "Cores per unit",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "core_units",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-56",
+                        "defaultValue": "8"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "cpu",
+                    "dataSource": "$parent",
+                    "cid": "container-36",
+                    "direction": "row",
+                    "style": "gap: 2em;",
+                    "hidden": false
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "size": "sm",
+                  "class": "",
+                  "layoutClass": "",
+                  "dataSource": "$parent",
+                  "cid": "card-23"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "RAM",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-28"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "dataSource": "$parent",
+                        "label": "Add ram",
+                        "buttonType": "button",
+                        "variant": "primary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": false,
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "$self",
+                                "name": "addData",
+                                "description": "Add instance",
+                                "argument": "{}"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "plus-circle",
+                        "cid": "button-21"
+                      },
+                      {
+                        "defaultValue": "=[]",
+                        "body": {
+                          "layout": "block",
+                          "components": [
+                            {
+                              "label": "Units",
+                              "inputType": "text",
+                              "description": "",
+                              "field": "units",
+                              "size": "sm",
+                              "disabled": false,
+                              "placeholder": "",
+                              "type": "InputView",
+                              "eventHandlers": [],
+                              "class": "mr-2 mb-0",
+                              "layoutClass": "align-self-end",
+                              "dataSource": "$parent",
+                              "cid": "input-57"
+                            },
+                            {
+                              "label": "Capacity",
+                              "inputType": "text",
+                              "description": "",
+                              "field": "capacity",
+                              "size": "sm",
+                              "disabled": false,
+                              "placeholder": "",
+                              "type": "InputView",
+                              "eventHandlers": [],
+                              "class": "mr-2 mb-0",
+                              "layoutClass": "align-self-end",
+                              "dataSource": "$parent",
+                              "cid": "input-58"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "secondary",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": "=(iteratorIndex === 0)",
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-4",
+                                      "name": "moveDataFromTo",
+                                      "description": "Move up",
+                                      "argument": "iteratorIndex, iteratorIndex - 1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "arrow-up",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-18"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "secondary",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": "=(iteratorIndex === $d('iterator-4').length - 1)",
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-4",
+                                      "name": "moveDataFromTo",
+                                      "description": "Move down",
+                                      "argument": "iteratorIndex, iteratorIndex + 1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "arrow-down",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-19"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "danger",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": false,
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-4",
+                                      "name": "removeDataAt",
+                                      "description": "Remove",
+                                      "argument": "iteratorIndex"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "trash",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-20"
+                            }
+                          ],
+                          "defaultValue": "={}",
+                          "type": "ContainerView",
+                          "eventHandlers": [],
+                          "direction": "row",
+                          "dataSource": "$parent",
+                          "cid": "container-37"
+                        },
+                        "type": "IteratorView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "iterator-4"
+                      }
+                    ],
+                    "defaultValue": "=[]",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "field": "ram",
+                    "cid": "container-38"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "size": "sm",
+                  "class": "",
+                  "layoutClass": "",
+                  "dataSource": "$parent",
+                  "cid": "card-24"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "Disk",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-29"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "dataSource": "$parent",
+                        "label": "Add disk",
+                        "buttonType": "button",
+                        "variant": "primary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": false,
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "$self",
+                                "name": "addData",
+                                "description": "Add instance",
+                                "argument": "{}"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "plus-circle",
+                        "cid": "button-25"
+                      },
+                      {
+                        "defaultValue": "=[]",
+                        "body": {
+                          "layout": "block",
+                          "components": [
+                            {
+                              "label": "Units",
+                              "inputType": "text",
+                              "description": "",
+                              "field": "units",
+                              "size": "sm",
+                              "disabled": false,
+                              "placeholder": "",
+                              "type": "InputView",
+                              "eventHandlers": [],
+                              "class": "mr-2 mb-0",
+                              "layoutClass": "align-self-end",
+                              "dataSource": "$parent",
+                              "cid": "input-59"
+                            },
+                            {
+                              "label": "Type",
+                              "inputType": "text",
+                              "description": "",
+                              "field": "type",
+                              "size": "sm",
+                              "disabled": false,
+                              "placeholder": "",
+                              "type": "InputView",
+                              "eventHandlers": [],
+                              "class": "mr-2 mb-0",
+                              "layoutClass": "align-self-end",
+                              "dataSource": "$parent",
+                              "cid": "input-60"
+                            },
+                            {
+                              "label": "Capacity",
+                              "inputType": "text",
+                              "description": "",
+                              "field": "capacity",
+                              "size": "sm",
+                              "disabled": false,
+                              "placeholder": "",
+                              "type": "InputView",
+                              "eventHandlers": [],
+                              "class": "mr-2 mb-0",
+                              "layoutClass": "align-self-end",
+                              "dataSource": "$parent",
+                              "cid": "input-61"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "secondary",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": "=(iteratorIndex === 0)",
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-5",
+                                      "name": "moveDataFromTo",
+                                      "description": "Move up",
+                                      "argument": "iteratorIndex, iteratorIndex - 1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "arrow-up",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-22"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "secondary",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": "=(iteratorIndex === $d('iterator-5').length - 1)",
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-5",
+                                      "name": "moveDataFromTo",
+                                      "description": "Move down",
+                                      "argument": "iteratorIndex, iteratorIndex + 1"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "arrow-down",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-23"
+                            },
+                            {
+                              "dataSource": "$parent",
+                              "label": "",
+                              "buttonType": "button",
+                              "variant": "danger",
+                              "size": "sm",
+                              "pill": false,
+                              "squared": false,
+                              "block": false,
+                              "disabled": false,
+                              "eventHandlers": [
+                                {
+                                  "global": false,
+                                  "name": "@click",
+                                  "actions": [
+                                    {
+                                      "targetId": "iterator-5",
+                                      "name": "removeDataAt",
+                                      "description": "Remove",
+                                      "argument": "iteratorIndex"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "type": "ButtonView",
+                              "icon": "trash",
+                              "layoutClass": "align-self-end",
+                              "cid": "button-24"
+                            }
+                          ],
+                          "defaultValue": "={}",
+                          "type": "ContainerView",
+                          "eventHandlers": [],
+                          "direction": "row",
+                          "dataSource": "$parent",
+                          "cid": "container-39"
+                        },
+                        "type": "IteratorView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "iterator-5"
+                      }
+                    ],
+                    "defaultValue": "=[]",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "dataSource": "$parent",
+                    "field": "disk",
+                    "cid": "container-40"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "size": "sm",
+                  "class": "",
+                  "layoutClass": "",
+                  "dataSource": "$parent",
+                  "cid": "card-25"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "Power_supply",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-30"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Units",
+                        "inputType": "range",
+                        "description": "",
+                        "field": "units",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@change",
+                            "actions": [
+                              {
+                                "targetId": "http-1",
+                                "name": "update",
+                                "description": "New action"
+                              }
+                            ]
+                          }
+                        ],
+                        "dataSource": "$parent",
+                        "cid": "input-62",
+                        "defaultValue": "=1",
+                        "min": "0",
+                        "max": "10"
+                      },
+                      {
+                        "label": "Weight per unit",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "unit_weight",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-63"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "power_supply",
+                    "dataSource": "$parent",
+                    "cid": "container-41"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "size": "sm",
+                  "class": "",
+                  "layoutClass": "",
+                  "dataSource": "$parent",
+                  "cid": "card-26"
+                }
+              ],
+              "defaultValue": "={}",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "dataSource": "$parent",
+              "cid": "container-42",
+              "field": "configuration",
+              "style": "",
+              "class": "p-0"
+            },
+            {
+              "dataSource": "$parent",
+              "label": "Submit",
+              "buttonType": "submit",
+              "variant": "primary",
+              "size": "default",
+              "pill": false,
+              "squared": false,
+              "block": true,
+              "disabled": false,
+              "eventHandlers": [
+                {
+                  "global": false,
+                  "name": "@click",
+                  "actions": [
+                    {
+                      "targetId": "http-1",
+                      "name": "update",
+                      "description": "Submit form",
+                      "argument": "",
+                      "condition": ""
+                    },
+                    {
+                      "targetId": "navbar",
+                      "name": "setData",
+                      "description": "Show results",
+                      "argument": "({ showResults: true })",
+                      "condition": "undefined"
+                    }
+                  ]
+                }
+              ],
+              "type": "ButtonView",
+              "cid": "button-16",
+              "hidden": null,
+              "icon": "arrow-right-circle",
+              "iconPosition": "right"
+            },
+            {
+              "layout": "block",
+              "components": [
+                {
+                  "tag": "h2",
+                  "text": "Impacts",
+                  "type": "TextView",
+                  "eventHandlers": [],
+                  "cid": "text-22",
+                  "hidden": null
+                },
+                {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "tag": "p",
+                      "text": "=`\n<h2>GWP</h2>\n<p>\n<strong>Manufacture</strong> : ${dataModel.impacts.gwp.manufacture}\n</p>\n<p>\n<strong>Use</strong> : ${dataModel.impacts.gwp.use}\n</p>\n`",
+                      "type": "TextView",
+                      "eventHandlers": [],
+                      "cid": "text-23",
+                      "dataSource": "http-1"
+                    },
+                    {
+                      "tag": "p",
+                      "text": "=`\n<h2>Primary energy</h2>\n<p>\n<strong>Manufacture</strong> : ${dataModel.impacts.pe.manufacture}\n</p>\n<p>\n<strong>Use</strong> : ${dataModel.impacts.pe.use}\n</p>\n`",
+                      "type": "TextView",
+                      "eventHandlers": [],
+                      "cid": "text-24",
+                      "dataSource": "http-1"
+                    },
+                    {
+                      "tag": "p",
+                      "text": "=`\n<h2>Resources</h2>\n<p>\n<strong>Manufacture</strong> : ${dataModel.impacts.adp.manufacture}\n</p>\n<p>\n<strong>Use</strong> : ${dataModel.impacts.adp.use}\n</p>\n`",
+                      "type": "TextView",
+                      "eventHandlers": [],
+                      "cid": "text-25",
+                      "dataSource": "http-1"
+                    }
+                  ],
+                  "defaultValue": "={}",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "cid": "container-31",
+                  "direction": "row",
+                  "justify": "space-around",
+                  "style": "",
+                  "form": null
+                },
+                {
+                  "layout": "block",
+                  "components": [
+                    {
+                      "chartType": "bar",
+                      "width": "400",
+                      "height": "400",
+                      "seriesList": [
+                        {
+                          "key": "manufacture",
+                          "label": "Manufacture",
+                          "backgroundColor": "#888a85",
+                          "borderWidth": 1
+                        },
+                        {
+                          "key": "use",
+                          "label": "Use",
+                          "backgroundColor": "#fce94f",
+                          "borderWidth": 1
+                        }
+                      ],
+                      "options": {},
+                      "defaultValue": "={}",
+                      "type": "ChartView",
+                      "eventHandlers": [],
+                      "cid": "chart-0",
+                      "dataSource": "http-1",
+                      "mapper": "([\n  {\n   title: \"GWP (kgCO2e)\",\n    manufacture: dataModel.impacts.gwp.manufacture,\n    use: dataModel.impacts.gwp.use,\n  }\n])",
+                      "stacked": true,
+                      "aspectRatio": "1"
+                    },
+                    {
+                      "chartType": "bar",
+                      "width": "400",
+                      "height": "400",
+                      "seriesList": [],
+                      "options": {},
+                      "defaultValue": "={}",
+                      "type": "ChartView",
+                      "eventHandlers": [],
+                      "cid": "chart-1",
+                      "dataSource": "http-1",
+                      "mapper": "([\n  {\n   title: \"Primary energy (MJ)\",\n    manufacture: dataModel.impacts.pe.manufacture,\n    use: dataModel.impacts.pe.use,\n  }\n])",
+                      "stacked": true,
+                      "aspectRatio": "1"
+                    },
+                    {
+                      "chartType": "bar",
+                      "width": "400",
+                      "height": "400",
+                      "seriesList": [],
+                      "options": {},
+                      "defaultValue": "={}",
+                      "type": "ChartView",
+                      "eventHandlers": [],
+                      "cid": "chart-2",
+                      "dataSource": "http-1",
+                      "mapper": "([\n  {\n   title: \"Abiotic resources\",\n    manufacture: dataModel.impacts.adp.manufacture,\n    use: dataModel.impacts.adp.use,\n  }\n])",
+                      "stacked": true,
+                      "aspectRatio": "1"
+                    }
+                  ],
+                  "defaultValue": "={}",
+                  "type": "ContainerView",
+                  "eventHandlers": [],
+                  "cid": "container-33",
+                  "direction": "row",
+                  "fillHeight": false
+                }
+              ],
+              "defaultValue": "={}",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "cid": "container-32",
+              "hidden": "=$c(\"navbar\").dataModel ? !$c(\"navbar\").dataModel.showResults : true",
+              "form": null
+            }
+          ],
+          "defaultValue": "={}",
+          "type": "ContainerView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "container-24",
+          "form": false,
+          "hidden": null
+        }
+      ],
+      "defaultValue": "={}",
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "cid": "index",
+      "style": "",
+      "class": "container mt-5 mb-5",
+      "hidden": null
+    },
+    {
+      "title": "",
+      "subTitle": "",
+      "imgSrc": "",
+      "imgPosition": "top",
+      "imgWidth": "",
+      "imgHeight": "",
+      "text": "",
+      "headerEnabled": true,
+      "header": {
+        "tag": "b",
+        "text": "Configuration",
+        "type": "TextView",
+        "eventHandlers": [],
+        "cid": "text-8"
+      },
+      "body": {
+        "layout": "block",
+        "components": [
+          {
+            "title": "",
+            "subTitle": "",
+            "imgSrc": "",
+            "imgPosition": "top",
+            "imgWidth": "",
+            "imgHeight": "",
+            "text": "",
+            "headerEnabled": true,
+            "header": {
+              "tag": "b",
+              "text": "Cpu",
+              "type": "TextView",
+              "eventHandlers": [],
+              "cid": "text-9"
+            },
+            "body": {
+              "layout": "block",
+              "components": [
+                {
+                  "label": "Units",
+                  "inputType": "text",
+                  "description": "",
+                  "field": "units",
+                  "size": "default",
+                  "disabled": false,
+                  "placeholder": "",
+                  "type": "InputView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "input-23"
+                },
+                {
+                  "label": "Core_units",
+                  "inputType": "text",
+                  "description": "",
+                  "field": "core_units",
+                  "size": "default",
+                  "disabled": false,
+                  "placeholder": "",
+                  "type": "InputView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "input-24"
+                }
+              ],
+              "defaultValue": "={}",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "field": "cpu",
+              "dataSource": "$parent",
+              "cid": "container-11"
+            },
+            "footer": {},
+            "type": "CardView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "card-8"
+          },
+          {
+            "title": "",
+            "subTitle": "",
+            "imgSrc": "",
+            "imgPosition": "top",
+            "imgWidth": "",
+            "imgHeight": "",
+            "text": "",
+            "headerEnabled": true,
+            "header": {
+              "tag": "b",
+              "text": "Ram",
+              "type": "TextView",
+              "eventHandlers": [],
+              "cid": "text-10"
+            },
+            "body": {
+              "layout": "block",
+              "components": [
+                {
+                  "dataSource": "$parent",
+                  "label": "Add ram",
+                  "buttonType": "button",
+                  "variant": "primary",
+                  "size": "sm",
+                  "pill": false,
+                  "squared": false,
+                  "block": false,
+                  "disabled": false,
+                  "eventHandlers": [
+                    {
+                      "global": false,
+                      "name": "@click",
+                      "actions": [
+                        {
+                          "targetId": "$self",
+                          "name": "addData",
+                          "description": "Add instance",
+                          "argument": "{}"
+                        }
+                      ]
+                    }
+                  ],
+                  "type": "ButtonView",
+                  "icon": "plus-circle",
+                  "cid": "button-11"
+                },
+                {
+                  "defaultValue": "=[]",
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Units",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "units",
+                        "size": "sm",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "class": "mr-2 mb-0",
+                        "layoutClass": "align-self-end",
+                        "dataSource": "$parent",
+                        "cid": "input-25"
+                      },
+                      {
+                        "label": "Capacity",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "capacity",
+                        "size": "sm",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "class": "mr-2 mb-0",
+                        "layoutClass": "align-self-end",
+                        "dataSource": "$parent",
+                        "cid": "input-26"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "secondary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": "=(iteratorIndex === 0)",
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-2",
+                                "name": "moveDataFromTo",
+                                "description": "Move up",
+                                "argument": "iteratorIndex, iteratorIndex - 1"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "arrow-up",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-8"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "secondary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": "=(iteratorIndex === $d('iterator-2').length - 1)",
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-2",
+                                "name": "moveDataFromTo",
+                                "description": "Move down",
+                                "argument": "iteratorIndex, iteratorIndex + 1"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "arrow-down",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-9"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "danger",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": false,
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-2",
+                                "name": "removeDataAt",
+                                "description": "Remove",
+                                "argument": "iteratorIndex"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "trash",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-10"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "direction": "row",
+                    "dataSource": "$parent",
+                    "cid": "container-12"
+                  },
+                  "type": "IteratorView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "iterator-2"
+                }
+              ],
+              "defaultValue": "=[]",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "dataSource": "$parent",
+              "field": "ram",
+              "cid": "container-13"
+            },
+            "footer": {},
+            "type": "CardView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "card-9"
+          },
+          {
+            "title": "",
+            "subTitle": "",
+            "imgSrc": "",
+            "imgPosition": "top",
+            "imgWidth": "",
+            "imgHeight": "",
+            "text": "",
+            "headerEnabled": true,
+            "header": {
+              "tag": "b",
+              "text": "Disk",
+              "type": "TextView",
+              "eventHandlers": [],
+              "cid": "text-11"
+            },
+            "body": {
+              "layout": "block",
+              "components": [
+                {
+                  "dataSource": "$parent",
+                  "label": "Add disk",
+                  "buttonType": "button",
+                  "variant": "primary",
+                  "size": "sm",
+                  "pill": false,
+                  "squared": false,
+                  "block": false,
+                  "disabled": false,
+                  "eventHandlers": [
+                    {
+                      "global": false,
+                      "name": "@click",
+                      "actions": [
+                        {
+                          "targetId": "$self",
+                          "name": "addData",
+                          "description": "Add instance",
+                          "argument": "{}"
+                        }
+                      ]
+                    }
+                  ],
+                  "type": "ButtonView",
+                  "icon": "plus-circle",
+                  "cid": "button-15"
+                },
+                {
+                  "defaultValue": "=[]",
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Units",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "units",
+                        "size": "sm",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "class": "mr-2 mb-0",
+                        "layoutClass": "align-self-end",
+                        "dataSource": "$parent",
+                        "cid": "input-27"
+                      },
+                      {
+                        "label": "Type",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "type",
+                        "size": "sm",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "class": "mr-2 mb-0",
+                        "layoutClass": "align-self-end",
+                        "dataSource": "$parent",
+                        "cid": "input-28"
+                      },
+                      {
+                        "label": "Capacity",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "capacity",
+                        "size": "sm",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "class": "mr-2 mb-0",
+                        "layoutClass": "align-self-end",
+                        "dataSource": "$parent",
+                        "cid": "input-29"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "secondary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": "=(iteratorIndex === 0)",
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-3",
+                                "name": "moveDataFromTo",
+                                "description": "Move up",
+                                "argument": "iteratorIndex, iteratorIndex - 1"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "arrow-up",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-12"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "secondary",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": "=(iteratorIndex === $d('iterator-3').length - 1)",
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-3",
+                                "name": "moveDataFromTo",
+                                "description": "Move down",
+                                "argument": "iteratorIndex, iteratorIndex + 1"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "arrow-down",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-13"
+                      },
+                      {
+                        "dataSource": "$parent",
+                        "label": "",
+                        "buttonType": "button",
+                        "variant": "danger",
+                        "size": "sm",
+                        "pill": false,
+                        "squared": false,
+                        "block": false,
+                        "disabled": false,
+                        "eventHandlers": [
+                          {
+                            "global": false,
+                            "name": "@click",
+                            "actions": [
+                              {
+                                "targetId": "iterator-3",
+                                "name": "removeDataAt",
+                                "description": "Remove",
+                                "argument": "iteratorIndex"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "ButtonView",
+                        "icon": "trash",
+                        "layoutClass": "align-self-end",
+                        "cid": "button-14"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "direction": "row",
+                    "dataSource": "$parent",
+                    "cid": "container-14"
+                  },
+                  "type": "IteratorView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "iterator-3"
+                }
+              ],
+              "defaultValue": "=[]",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "dataSource": "$parent",
+              "field": "disk",
+              "cid": "container-15"
+            },
+            "footer": {},
+            "type": "CardView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "card-10"
+          },
+          {
+            "title": "",
+            "subTitle": "",
+            "imgSrc": "",
+            "imgPosition": "top",
+            "imgWidth": "",
+            "imgHeight": "",
+            "text": "",
+            "headerEnabled": true,
+            "header": {
+              "tag": "b",
+              "text": "Power_supply",
+              "type": "TextView",
+              "eventHandlers": [],
+              "cid": "text-12"
+            },
+            "body": {
+              "layout": "block",
+              "components": [
+                {
+                  "label": "Units",
+                  "inputType": "text",
+                  "description": "",
+                  "field": "units",
+                  "size": "default",
+                  "disabled": false,
+                  "placeholder": "",
+                  "type": "InputView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "input-30"
+                },
+                {
+                  "label": "Unit_weight",
+                  "inputType": "text",
+                  "description": "",
+                  "field": "unit_weight",
+                  "size": "default",
+                  "disabled": false,
+                  "placeholder": "",
+                  "type": "InputView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "input-31"
+                }
+              ],
+              "defaultValue": "={}",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "field": "power_supply",
+              "dataSource": "$parent",
+              "cid": "container-16"
+            },
+            "footer": {},
+            "type": "CardView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "card-11"
+          }
+        ],
+        "defaultValue": "={}",
+        "type": "ContainerView",
+        "eventHandlers": [],
+        "field": "configuration",
+        "dataSource": "$parent",
+        "cid": "container-17"
+      },
+      "footer": {},
+      "type": "CardView",
+      "eventHandlers": [],
+      "dataSource": "$parent",
+      "cid": "card-12"
+    },
+    {
+      "title": "",
+      "subTitle": "",
+      "imgSrc": "",
+      "imgPosition": "top",
+      "imgWidth": "",
+      "imgHeight": "",
+      "text": "",
+      "headerEnabled": true,
+      "header": {
+        "tag": "b",
+        "text": "Usage",
+        "type": "TextView",
+        "eventHandlers": [],
+        "cid": "text-13"
+      },
+      "body": {
+        "layout": "block",
+        "components": [
+          {
+            "label": "Max_power",
+            "inputType": "text",
+            "description": "",
+            "field": "max_power",
+            "size": "default",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "input-32"
+          },
+          {
+            "label": "Years_use_time",
+            "inputType": "text",
+            "description": "",
+            "field": "years_use_time",
+            "size": "default",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "input-33"
+          },
+          {
+            "label": "Days_use_time",
+            "inputType": "text",
+            "description": "",
+            "field": "days_use_time",
+            "size": "default",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "input-34"
+          },
+          {
+            "label": "Hours_use_time",
+            "inputType": "text",
+            "description": "",
+            "field": "hours_use_time",
+            "size": "default",
+            "disabled": false,
+            "placeholder": "",
+            "type": "InputView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "input-35"
+          },
+          {
+            "title": "",
+            "subTitle": "",
+            "imgSrc": "",
+            "imgPosition": "top",
+            "imgWidth": "",
+            "imgHeight": "",
+            "text": "",
+            "headerEnabled": true,
+            "header": {
+              "tag": "b",
+              "text": "Workload",
+              "type": "TextView",
+              "eventHandlers": [],
+              "cid": "text-14"
+            },
+            "body": {
+              "layout": "block",
+              "components": [
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "10",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-15"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Time",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "time",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-36"
+                      },
+                      {
+                        "label": "Power",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "power",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-37"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "10",
+                    "dataSource": "$parent",
+                    "cid": "container-18"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "card-13"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "50",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-16"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Time",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "time",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-38"
+                      },
+                      {
+                        "label": "Power",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "power",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-39"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "50",
+                    "dataSource": "$parent",
+                    "cid": "container-19"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "card-14"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "100",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-17"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Time",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "time",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-40"
+                      },
+                      {
+                        "label": "Power",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "power",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-41"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "100",
+                    "dataSource": "$parent",
+                    "cid": "container-20"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "card-15"
+                },
+                {
+                  "title": "",
+                  "subTitle": "",
+                  "imgSrc": "",
+                  "imgPosition": "top",
+                  "imgWidth": "",
+                  "imgHeight": "",
+                  "text": "",
+                  "headerEnabled": true,
+                  "header": {
+                    "tag": "b",
+                    "text": "Idle",
+                    "type": "TextView",
+                    "eventHandlers": [],
+                    "cid": "text-18"
+                  },
+                  "body": {
+                    "layout": "block",
+                    "components": [
+                      {
+                        "label": "Time",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "time",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-42"
+                      },
+                      {
+                        "label": "Power",
+                        "inputType": "text",
+                        "description": "",
+                        "field": "power",
+                        "size": "default",
+                        "disabled": false,
+                        "placeholder": "",
+                        "type": "InputView",
+                        "eventHandlers": [],
+                        "dataSource": "$parent",
+                        "cid": "input-43"
+                      }
+                    ],
+                    "defaultValue": "={}",
+                    "type": "ContainerView",
+                    "eventHandlers": [],
+                    "field": "idle",
+                    "dataSource": "$parent",
+                    "cid": "container-21"
+                  },
+                  "footer": {},
+                  "type": "CardView",
+                  "eventHandlers": [],
+                  "dataSource": "$parent",
+                  "cid": "card-16"
+                }
+              ],
+              "defaultValue": "={}",
+              "type": "ContainerView",
+              "eventHandlers": [],
+              "field": "workload",
+              "dataSource": "$parent",
+              "cid": "container-22"
+            },
+            "footer": {},
+            "type": "CardView",
+            "eventHandlers": [],
+            "dataSource": "$parent",
+            "cid": "card-17"
+          }
+        ],
+        "defaultValue": "={}",
+        "type": "ContainerView",
+        "eventHandlers": [],
+        "field": "usage",
+        "dataSource": "$parent",
+        "cid": "container-23"
+      },
+      "footer": {},
+      "type": "CardView",
+      "eventHandlers": [],
+      "dataSource": "$parent",
+      "cid": "card-18"
+    },
+    {
+      "layout": "block",
+      "components": [],
+      "defaultValue": "={}",
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "cid": "container-25",
+      "form": null
+    },
+    {
+      "layout": "block",
+      "components": [],
+      "defaultValue": "={}",
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "cid": "container-26",
+      "dataSource": "http-1",
+      "mapper": "",
+      "field": "impacts"
+    },
+    {
+      "layout": "block",
+      "components": [
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "GWP",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-19"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "label": "Manufacture",
+                "inputType": "text",
+                "description": "",
+                "field": "manufacture",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-44"
+              },
+              {
+                "label": "Use",
+                "inputType": "text",
+                "description": "",
+                "field": "use",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-45"
+              },
+              {
+                "label": "Unit",
+                "inputType": "text",
+                "description": "",
+                "field": "unit",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-46"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "gwp",
+            "dataSource": "$parent",
+            "cid": "container-27"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-19"
+        },
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "Pe",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-20"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "label": "Manufacture",
+                "inputType": "text",
+                "description": "",
+                "field": "manufacture",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-47"
+              },
+              {
+                "label": "Use",
+                "inputType": "text",
+                "description": "",
+                "field": "use",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-48"
+              },
+              {
+                "label": "Unit",
+                "inputType": "text",
+                "description": "",
+                "field": "unit",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-49"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "pe",
+            "dataSource": "$parent",
+            "cid": "container-28"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-20"
+        },
+        {
+          "title": "",
+          "subTitle": "",
+          "imgSrc": "",
+          "imgPosition": "top",
+          "imgWidth": "",
+          "imgHeight": "",
+          "text": "",
+          "headerEnabled": true,
+          "header": {
+            "tag": "b",
+            "text": "Adp",
+            "type": "TextView",
+            "eventHandlers": [],
+            "cid": "text-21"
+          },
+          "body": {
+            "layout": "block",
+            "components": [
+              {
+                "label": "Manufacture",
+                "inputType": "text",
+                "description": "",
+                "field": "manufacture",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-50"
+              },
+              {
+                "label": "Use",
+                "inputType": "text",
+                "description": "",
+                "field": "use",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-51"
+              },
+              {
+                "label": "Unit",
+                "inputType": "text",
+                "description": "",
+                "field": "unit",
+                "size": "default",
+                "disabled": false,
+                "placeholder": "",
+                "type": "InputView",
+                "eventHandlers": [],
+                "dataSource": "$parent",
+                "cid": "input-52"
+              }
+            ],
+            "defaultValue": "={}",
+            "type": "ContainerView",
+            "eventHandlers": [],
+            "field": "adp",
+            "dataSource": "$parent",
+            "cid": "container-29"
+          },
+          "footer": {},
+          "type": "CardView",
+          "eventHandlers": [],
+          "dataSource": "$parent",
+          "cid": "card-21"
+        }
+      ],
+      "defaultValue": "={}",
+      "type": "ContainerView",
+      "eventHandlers": [],
+      "dataSource": "http-1",
+      "cid": "container-30",
+      "field": "impacts",
+      "class": "p-0",
+      "style": ""
+    },
+    {
+      "title": "",
+      "type": "DialogView",
+      "eventHandlers": [],
+      "cid": "dialog-0"
+    },
+    {
+      "dataSource": "$parent",
+      "label": "Voir les détails",
+      "buttonType": "button",
+      "variant": "secondary",
+      "pill": false,
+      "squared": false,
+      "block": false,
+      "disabled": false,
+      "eventHandlers": [
+        {
+          "global": false,
+          "name": "@click",
+          "actions": [
+            {
+              "targetId": "dialog-0",
+              "name": "show",
+              "description": "Default action"
+            }
+          ]
+        }
+      ],
+      "type": "ButtonView",
+      "cid": "button-17"
+    },
+    {
+      "type": "CollapseView",
+      "eventHandlers": [],
+      "cid": "collapse-0",
+      "appear": false,
+      "visible": true
+    },
+    {
+      "orientation": "VERTICAL",
+      "secondaryComponent": {
+        "orientation": "VERTICAL",
+        "secondaryComponent": {},
+        "type": "SplitView",
+        "eventHandlers": [],
+        "cid": "split-1"
+      },
+      "type": "SplitView",
+      "eventHandlers": [],
+      "cid": "split-0",
+      "resizableSplit": false,
+      "fillHeight": false
+    },
+    {
+      "key": "undefined",
+      "defaultValue": "=[]",
+      "type": "LocalStorageConnector",
+      "eventHandlers": [],
+      "cid": "local-storage-0"
+    },
+    {
+      "dataSource": "$parent",
+      "label": "Click me",
+      "buttonType": "button",
+      "variant": "secondary",
+      "size": "default",
+      "pill": false,
+      "squared": false,
+      "block": false,
+      "disabled": false,
+      "eventHandlers": [
+        {
+          "global": false,
+          "name": "@click",
+          "actions": [
+            {
+              "targetId": "$self",
+              "name": "eval",
+              "description": "Default action"
+            }
+          ]
+        }
+      ],
+      "type": "ButtonView",
+      "cid": "button-26"
+    }
+  ]
+}
