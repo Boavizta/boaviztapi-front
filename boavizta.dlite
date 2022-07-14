@@ -929,7 +929,7 @@
           "type": "HttpConnector",
           "eventHandlers": [],
           "cid": "http-1",
-          "baseUrl": "http://localhost:5000",
+          "baseUrl": "https://api.boavizta.org",
           "path": "v1/server/",
           "resultType": "JSON",
           "form": false,
@@ -937,7 +937,8 @@
           "mode": "cors",
           "init": "",
           "body": "=$d(\"container-24\")",
-          "headers": "={\"Content-Type\": \"application/json\"}"
+          "headers": "={\"Content-Type\": \"application/json\"}",
+          "proxy": true
         },
         {
           "layout": "block",
@@ -972,25 +973,28 @@
                     "eventHandlers": [],
                     "dataSource": "$parent",
                     "cid": "input-18",
-                    "defaultValue": ""
+                    "defaultValue": "",
+                    "dataType": "string",
+                    "size": "sm"
                   },
                   {
                     "label": "Name",
                     "inputType": "text",
                     "description": "",
                     "field": "name",
-                    "size": "default",
+                    "size": "sm",
                     "disabled": false,
                     "placeholder": "",
                     "type": "InputView",
                     "eventHandlers": [],
                     "dataSource": "$parent",
                     "cid": "input-19",
-                    "defaultValue": ""
+                    "defaultValue": "",
+                    "dataType": "string"
                   },
                   {
                     "label": "Type",
-                    "size": "default",
+                    "size": "sm",
                     "description": "",
                     "field": "type",
                     "disabled": false,
@@ -1005,7 +1009,7 @@
                     "inputType": "number",
                     "description": "",
                     "field": "year",
-                    "size": "default",
+                    "size": "sm",
                     "disabled": false,
                     "placeholder": "aaaa",
                     "type": "InputView",
@@ -1013,21 +1017,23 @@
                     "dataSource": "$parent",
                     "cid": "input-21",
                     "min": "1970",
-                    "max": "2022"
+                    "max": "2022",
+                    "dataType": "number"
                   },
                   {
                     "label": "Archetype",
                     "inputType": "text",
                     "description": "",
                     "field": "archetype",
-                    "size": "default",
+                    "size": "sm",
                     "disabled": false,
                     "placeholder": "",
                     "type": "InputView",
                     "eventHandlers": [],
                     "dataSource": "$parent",
                     "cid": "input-22",
-                    "defaultValue": ""
+                    "defaultValue": "",
+                    "dataType": "string"
                   }
                 ],
                 "defaultValue": "={}",
@@ -1098,7 +1104,8 @@
                         ],
                         "type": "ButtonView",
                         "cid": "button-27",
-                        "icon": "chevron-expand"
+                        "icon": "chevron-expand",
+                        "hidden": null
                       }
                     ],
                     "defaultValue": "={}",
@@ -1117,28 +1124,30 @@
                         "inputType": "text",
                         "description": "",
                         "field": "units",
-                        "size": "default",
+                        "size": "sm",
                         "disabled": false,
                         "placeholder": "",
                         "type": "InputView",
                         "eventHandlers": [],
                         "dataSource": "$parent",
                         "cid": "input-55",
-                        "defaultValue": "2"
+                        "defaultValue": "2",
+                        "dataType": "string"
                       },
                       {
                         "label": "Cores per unit",
                         "inputType": "text",
                         "description": "",
                         "field": "core_units",
-                        "size": "default",
+                        "size": "sm",
                         "disabled": false,
                         "placeholder": "",
                         "type": "InputView",
                         "eventHandlers": [],
                         "dataSource": "$parent",
                         "cid": "input-56",
-                        "defaultValue": "8"
+                        "defaultValue": "8",
+                        "dataType": "string"
                       }
                     ],
                     "defaultValue": "={}",
@@ -1158,7 +1167,8 @@
                   "class": "",
                   "layoutClass": "",
                   "dataSource": "$parent",
-                  "cid": "card-23"
+                  "cid": "card-23",
+                  "hidden": false
                 },
                 {
                   "title": "",
@@ -1225,7 +1235,8 @@
                               "class": "mr-2 mb-0",
                               "layoutClass": "align-self-end",
                               "dataSource": "$parent",
-                              "cid": "input-57"
+                              "cid": "input-57",
+                              "dataType": "string"
                             },
                             {
                               "label": "Capacity",
@@ -1240,7 +1251,8 @@
                               "class": "mr-2 mb-0",
                               "layoutClass": "align-self-end",
                               "dataSource": "$parent",
-                              "cid": "input-58"
+                              "cid": "input-58",
+                              "dataType": "string"
                             },
                             {
                               "dataSource": "$parent",
@@ -1424,7 +1436,8 @@
                               "class": "mr-2 mb-0",
                               "layoutClass": "align-self-end",
                               "dataSource": "$parent",
-                              "cid": "input-59"
+                              "cid": "input-59",
+                              "dataType": "string"
                             },
                             {
                               "label": "Type",
@@ -1439,7 +1452,8 @@
                               "class": "mr-2 mb-0",
                               "layoutClass": "align-self-end",
                               "dataSource": "$parent",
-                              "cid": "input-60"
+                              "cid": "input-60",
+                              "dataType": "string"
                             },
                             {
                               "label": "Capacity",
@@ -1454,7 +1468,8 @@
                               "class": "mr-2 mb-0",
                               "layoutClass": "align-self-end",
                               "dataSource": "$parent",
-                              "cid": "input-61"
+                              "cid": "input-61",
+                              "dataType": "string"
                             },
                             {
                               "dataSource": "$parent",
@@ -1597,7 +1612,7 @@
                         "inputType": "range",
                         "description": "",
                         "field": "units",
-                        "size": "default",
+                        "size": "sm",
                         "disabled": false,
                         "placeholder": "",
                         "type": "InputView",
@@ -1618,20 +1633,23 @@
                         "cid": "input-62",
                         "defaultValue": "=1",
                         "min": "0",
-                        "max": "10"
+                        "max": "10",
+                        "dataType": "number",
+                        "hidden": null
                       },
                       {
                         "label": "Weight per unit",
                         "inputType": "text",
                         "description": "",
                         "field": "unit_weight",
-                        "size": "default",
+                        "size": "sm",
                         "disabled": false,
                         "placeholder": "",
                         "type": "InputView",
                         "eventHandlers": [],
                         "dataSource": "$parent",
-                        "cid": "input-63"
+                        "cid": "input-63",
+                        "dataType": "string"
                       }
                     ],
                     "defaultValue": "={}",
@@ -1639,7 +1657,10 @@
                     "eventHandlers": [],
                     "field": "power_supply",
                     "dataSource": "$parent",
-                    "cid": "container-41"
+                    "cid": "container-41",
+                    "direction": "row",
+                    "columnGap": "2rem",
+                    "hidden": null
                   },
                   "footer": {},
                   "type": "CardView",
@@ -1658,7 +1679,9 @@
               "cid": "container-42",
               "field": "configuration",
               "style": "",
-              "class": "p-0"
+              "class": "p-0",
+              "form": null,
+              "showStateOnInput": null
             },
             {
               "dataSource": "$parent",
@@ -1670,28 +1693,7 @@
               "squared": false,
               "block": true,
               "disabled": false,
-              "eventHandlers": [
-                {
-                  "global": false,
-                  "name": "@click",
-                  "actions": [
-                    {
-                      "targetId": "http-1",
-                      "name": "update",
-                      "description": "Submit form",
-                      "argument": "",
-                      "condition": ""
-                    },
-                    {
-                      "targetId": "navbar",
-                      "name": "setData",
-                      "description": "Show results",
-                      "argument": "({ showResults: true })",
-                      "condition": "undefined"
-                    }
-                  ]
-                }
-              ],
+              "eventHandlers": [],
               "type": "ButtonView",
               "cid": "button-16",
               "hidden": null,
@@ -1775,7 +1777,8 @@
                       "dataSource": "http-1",
                       "mapper": "([\n  {\n   title: \"GWP (kgCO2e)\",\n    manufacture: dataModel.impacts.gwp.manufacture,\n    use: dataModel.impacts.gwp.use,\n  }\n])",
                       "stacked": true,
-                      "aspectRatio": "1"
+                      "aspectRatio": "1",
+                      "fillHeight": true
                     },
                     {
                       "chartType": "bar",
@@ -1790,7 +1793,8 @@
                       "dataSource": "http-1",
                       "mapper": "([\n  {\n   title: \"Primary energy (MJ)\",\n    manufacture: dataModel.impacts.pe.manufacture,\n    use: dataModel.impacts.pe.use,\n  }\n])",
                       "stacked": true,
-                      "aspectRatio": "1"
+                      "aspectRatio": "1",
+                      "fillHeight": true
                     },
                     {
                       "chartType": "bar",
@@ -1805,7 +1809,8 @@
                       "dataSource": "http-1",
                       "mapper": "([\n  {\n   title: \"Abiotic resources\",\n    manufacture: dataModel.impacts.adp.manufacture,\n    use: dataModel.impacts.adp.use,\n  }\n])",
                       "stacked": true,
-                      "aspectRatio": "1"
+                      "aspectRatio": "1",
+                      "fillHeight": true
                     }
                   ],
                   "defaultValue": "={}",
@@ -1826,11 +1831,30 @@
           ],
           "defaultValue": "={}",
           "type": "ContainerView",
-          "eventHandlers": [],
+          "eventHandlers": [
+            {
+              "global": false,
+              "name": "@submit",
+              "actions": [
+                {
+                  "targetId": "http-1",
+                  "name": "update",
+                  "description": "Invoke API"
+                },
+                {
+                  "targetId": "navbar",
+                  "name": "setData",
+                  "description": "Show results",
+                  "argument": "({ showResults: true })"
+                }
+              ]
+            }
+          ],
           "dataSource": "$parent",
           "cid": "container-24",
-          "form": false,
-          "hidden": null
+          "form": true,
+          "hidden": null,
+          "showStateOnInput": true
         }
       ],
       "defaultValue": "={}",
